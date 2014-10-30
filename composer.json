@@ -1,0 +1,17 @@
+{
+    "name": "anomaly/users_module_activation_check-extension",
+    "type": "streams-addon",
+    "description": "This is an activation check extension for the Users module.",
+    "authors": [
+        {
+            "name": "AnomalyLabs",
+            "email": "hello@anomaly.is"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
