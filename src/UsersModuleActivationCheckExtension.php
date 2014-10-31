@@ -2,7 +2,7 @@
 
 use Anomaly\Streams\Addon\Module\Users\Activation\Contract\ActivationInterface;
 use Anomaly\Streams\Addon\Module\Users\Activation\Contract\ActivationRepositoryInterface;
-use Anomaly\Streams\Addon\Module\Users\Activation\Exception\UserNotActivatedException;
+use Anomaly\Streams\Addon\Module\Users\Exception\UserNotActivatedException;
 use Anomaly\Streams\Addon\Module\Users\Extension\CheckInterface;
 use Anomaly\Streams\Addon\Module\Users\User\Contract\UserInterface;
 use Anomaly\Streams\Platform\Addon\Extension\ExtensionAddon;
@@ -67,9 +67,9 @@ class UsersModuleActivationCheckExtension extends ExtensionAddon implements Chec
             'Anomaly\Streams\Addon\Module\Users\Activation\Contract\ActivationRepositoryInterface'
         );
 
-        $activation = $this->activations->findByUserId($user->getUserId());
+        $activation = $this->activations->findActivationByUserId($user->getUserId());
 
-        if (!$activation instanceof ActivationInterface or !$activation->isComplete()) {
+        if (!$activation instanceof ActivationInterface or !$activation->itIsComplete()) {
 
             throw new UserNotActivatedException("Your account has not been activated.");
         }
