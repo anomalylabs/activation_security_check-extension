@@ -3,7 +3,7 @@
 use Anomaly\Streams\Addon\Module\Users\Activation\Contract\ActivationInterface;
 use Anomaly\Streams\Addon\Module\Users\Activation\Contract\ActivationRepositoryInterface;
 use Anomaly\Streams\Addon\Module\Users\Activation\Exception\UserNotActivatedException;
-use Anomaly\Streams\Addon\Module\Users\Extension\SecurityCheckInterface;
+use Anomaly\Streams\Addon\Module\Users\Extension\CheckpointInterface;
 use Anomaly\Streams\Addon\Module\Users\User\Contract\UserInterface;
 use Anomaly\Streams\Platform\Addon\Extension\ExtensionAddon;
 
@@ -15,7 +15,7 @@ use Anomaly\Streams\Platform\Addon\Extension\ExtensionAddon;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\Extension\UsersModuleActivationCheckExtension
  */
-class UsersModuleActivationCheckExtension extends ExtensionAddon implements SecurityCheckInterface
+class UsersModuleActivationCheckExtension extends ExtensionAddon implements CheckpointInterface
 {
 
     /**
