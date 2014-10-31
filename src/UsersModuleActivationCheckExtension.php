@@ -67,7 +67,7 @@ class UsersModuleActivationCheckExtension extends ExtensionAddon implements Chec
             'Anomaly\Streams\Addon\Module\Users\Activation\Contract\ActivationRepositoryInterface'
         );
 
-        $activation = $this->activations->findActivationByUserId($user->getUserId());
+        $activation = $this->activations->findActivationByUserId($user->getId());
 
         if (!$activation instanceof ActivationInterface or !$activation->itIsComplete()) {
 
