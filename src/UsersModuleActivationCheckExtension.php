@@ -57,6 +57,8 @@ class UsersModuleActivationCheckExtension extends ExtensionAddon implements Chec
     }
 
     /**
+     * Check the activation status of a user.
+     *
      * @param UserInterface $user
      */
     protected function checkActivation(UserInterface $user)
