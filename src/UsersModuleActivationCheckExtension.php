@@ -19,7 +19,7 @@ class UsersModuleActivationCheckExtension extends ExtensionAddon implements Chec
 {
 
     /**
-     * The activation repository interface object.
+     * The activation repository object.
      *
      * @var
      */
@@ -30,10 +30,10 @@ class UsersModuleActivationCheckExtension extends ExtensionAddon implements Chec
      *
      * @param ActivationRepositoryInterface $activations
      */
-    /*function __construct(ActivationRepositoryInterface $activations)
+    function __construct(ActivationRepositoryInterface $activations)
     {
         $this->activations = $activations;
-    }*/
+    }
 
     /**
      * Security check during login.
@@ -63,10 +63,6 @@ class UsersModuleActivationCheckExtension extends ExtensionAddon implements Chec
      */
     protected function checkActivation(UserInterface $user)
     {
-        $this->activations = app(
-            'Anomaly\Streams\Addon\Module\Users\Activation\Contract\ActivationRepositoryInterface'
-        );
-
         $activation = $this->activations->findActivationByUserId($user->getId());
 
         if (!$activation instanceof ActivationInterface or !$activation->itIsComplete()) {
