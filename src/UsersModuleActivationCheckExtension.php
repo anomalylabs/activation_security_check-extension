@@ -1,8 +1,8 @@
 <?php namespace Anomaly\Streams\Addon\Extension\UsersModuleActivationCheck;
 
 use Anomaly\Streams\Addon\Module\Users\Activation\Contract\ActivationInterface;
-use Anomaly\Streams\Addon\Module\Users\Extension\CheckExtension;
 use Anomaly\Streams\Addon\Module\Users\User\Contract\UserInterface;
+use Anomaly\Streams\Platform\Addon\Extension\Extension;
 
 /**
  * Class UsersModuleActivationCheckExtension
@@ -12,7 +12,7 @@ use Anomaly\Streams\Addon\Module\Users\User\Contract\UserInterface;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\Extension\UsersModuleActivationCheckExtension
  */
-class UsersModuleActivationCheckExtension extends CheckExtension
+class UsersModuleActivationCheckExtension extends Extension
 {
 
     /**
