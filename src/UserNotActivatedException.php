@@ -1,4 +1,4 @@
-<?php namespace Anomaly\Streams\Addon\Extension\UsersModuleActivationCheck;
+<?php namespace Anomaly\UsersModuleActivationCheckExtension;
 
 /**
  * Class UserNotActivatedException

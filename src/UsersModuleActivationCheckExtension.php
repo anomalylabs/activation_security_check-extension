@@ -1,4 +1,4 @@
-<?php namespace Anomaly\Streams\Addon\Extension\UsersModuleActivationCheck;
+<?php namespace Anomaly\UsersModuleActivationCheckExtension;
 
 use Anomaly\Streams\Addon\Module\Users\Activation\Contract\ActivationInterface;
 use Anomaly\Streams\Addon\Module\Users\User\Contract\UserInterface;
