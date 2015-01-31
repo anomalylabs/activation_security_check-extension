@@ -2,7 +2,6 @@
 
 use Anomaly\UsersModule\Security\SecurityCheckExtension;
 use Anomaly\UsersModule\User\Contract\UserInterface;
-use Illuminate\Http\Request;
 
 /**
  * Class ActivationCheckExtension
@@ -28,7 +27,7 @@ class ActivationCheckExtension extends SecurityCheckExtension
      *
      * @param UserInterface $user
      */
-    public function check(UserInterface $user = null, Request $request)
+    public function check(UserInterface $user = null)
     {
     }
 }
