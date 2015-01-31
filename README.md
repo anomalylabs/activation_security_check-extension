@@ -1,3 +1,3 @@
-# Activation Check
+# Activation Security Check
 
-This is an activation security check extension for the Users module.
+A security extension that assures users are activated.

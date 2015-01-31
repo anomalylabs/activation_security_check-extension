@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'name'        => 'Activation Check',
-    'description' => 'An extension that makes sure users are activated.',
+    'name'        => 'Activation Security Check',
+    'description' => 'A security extension that assures users are activated.',
 ];

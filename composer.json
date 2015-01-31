@@ -1,7 +1,7 @@
 {
-    "name": "anomaly/activation_check-extension",
+    "name": "anomaly/activation_security_check-extension",
     "type": "streams-addon",
-    "description": "This is an activation check extension for the Users module.",
+    "description": "A security extension that assures users are activated.",
     "authors": [
         {
             "name": "AnomalyLabs",
@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Anomaly\\ActivationCheckExtension\\": "src/"
+            "Anomaly\\ActivationSecurityCheckExtension\\": "src/"
         }
     },
     "extra": {
