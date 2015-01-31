@@ -65,7 +65,7 @@ class ActivationSecurityCheckExtension extends SecurityCheckExtension
 
             app('auth')->logout($user);
 
-            $this->messages->error(trans('anomaly.extension.activation_security_check::error.not_activated'));
+            $this->messages->error('anomaly.extension.activation_security_check::error.not_activated');
 
             return redirect('admin/login');
         }
