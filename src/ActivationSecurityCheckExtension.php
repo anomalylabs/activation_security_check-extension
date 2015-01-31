@@ -63,7 +63,7 @@ class ActivationSecurityCheckExtension extends SecurityCheckExtension
     {
         if ($user && !$user->isActivated()) {
 
-            app('auth')->logout($user);
+            $this->guard->logout($user);
 
             $this->messages->error('anomaly.extension.activation_security_check::error.not_activated');
 
