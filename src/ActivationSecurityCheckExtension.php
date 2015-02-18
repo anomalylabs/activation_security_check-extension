@@ -2,7 +2,7 @@
 
 use Anomaly\Streams\Platform\Message\MessageBag;
 use Anomaly\UsersModule\Security\SecurityCheckExtension;
-use Anomaly\UsersModule\User\Contract\UserInterface;
+use Anomaly\UsersModule\User\Contract\User;
 use Illuminate\Auth\Guard;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -56,10 +56,10 @@ class ActivationSecurityCheckExtension extends SecurityCheckExtension
      * Run the security check.
      *
      * @param Request       $request
-     * @param UserInterface $user
+     * @param User $user
      * @return void|Response
      */
-    public function check(Request $request, UserInterface $user = null)
+    public function check(Request $request, User $user = null)
     {
         if ($user && !$user->isActivated()) {
 
