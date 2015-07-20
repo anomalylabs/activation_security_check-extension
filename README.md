@@ -1,3 +1,3 @@
-# Activation SecurityChecker Check
+# Activation Security Check
 
-A security extension that assures users are activated.
+A security check extension that assures users are activated.

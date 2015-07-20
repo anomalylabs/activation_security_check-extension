@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'name'        => 'Activation SecurityChecker Check',
-    'description' => 'A security extension that assures users are activated.',
+    'name'        => 'Activation Security Check',
+    'description' => 'A security check extension that assures users are activated.'
 ];
