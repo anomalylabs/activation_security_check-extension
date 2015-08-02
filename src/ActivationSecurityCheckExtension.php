@@ -1,6 +1,6 @@
 <?php namespace Anomaly\ActivationSecurityCheckExtension;
 
-use Anomaly\UsersModule\Security\SecurityCheckExtension;
+use Anomaly\Streams\Platform\Addon\Extension\Extension;
 
 /**
  * Class ActivationSecurityCheckExtension
@@ -10,7 +10,7 @@ use Anomaly\UsersModule\Security\SecurityCheckExtension;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\Extension\ActivationSecurityCheckExtension
  */
-class ActivationSecurityCheckExtension extends SecurityCheckExtension
+class ActivationSecurityCheckExtension extends Extension
 {
 
     /**
