@@ -1,8 +1,8 @@
 <?php namespace Anomaly\ActivationSecurityCheckExtension;
 
 use Anomaly\Streams\Platform\Message\MessageBag;
-use Anomaly\UsersModule\Authenticator\Authenticator;
 use Anomaly\UsersModule\User\Contract\UserInterface;
+use Anomaly\UsersModule\User\UserAuthenticator;
 
 /**
  * Class ActivationSecurityCheckHandler
@@ -25,17 +25,17 @@ class ActivationSecurityCheckHandler
     /**
      * The authenticator utility.
      *
-     * @var Authenticator
+     * @var UserAuthenticator
      */
     protected $authenticator;
 
     /**
      * Create a new ActivationSecurityCheckHandler instance.
      *
-     * @param MessageBag    $messages
-     * @param Authenticator $authenticator
+     * @param MessageBag        $messages
+     * @param UserAuthenticator $authenticator
      */
-    public function __construct(MessageBag $messages, Authenticator $authenticator)
+    public function __construct(MessageBag $messages, UserAuthenticator $authenticator)
     {
         $this->messages      = $messages;
         $this->authenticator = $authenticator;
@@ -49,7 +49,7 @@ class ActivationSecurityCheckHandler
      */
     public function handle(UserInterface $user = null)
     {
-        if ($user && !$user->isActivated($user)) {
+        if ($user && !$user->isActivated()) {
 
             $this->authenticator->kickOut($user, 'inactive');
 
